@@ -1,0 +1,38 @@
+LOGIN
+	component 
+	service 
+	login via google
+
+LISTAGEM CERVEJA
+	component
+	service
+	criar o card
+	implementar botão saiba mais
+	conectar os endpoints
+	alimentar o card
+	posicionar o card 
+	criar lista de card
+	paginação
+	
+HEADER - shared
+	component 
+	service 
+	criar campo buscar
+	implementar busca
+	implementar limpar campo (somente se o campo estiver preenchido)
+
+DETALHES CERVEJA
+	component
+	service
+	criar card
+	conectar endpoint
+	alimentar card
+	colocar o baner 
+
+BANNER CERVEJA - shared
+	component
+	service
+	criar o baner
+	conectra ao endpoint
+	almentar o baner com a imagem
+	
