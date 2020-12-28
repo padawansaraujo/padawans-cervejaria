@@ -1,0 +1,18 @@
+<div [formGroup]="form" class="header">
+    <div class="titulo">
+        <img class="beer-icon" src="../../../assets/images/beers (1).svg" alt="">
+        <h3>Cervejas</h3>
+    </div>
+
+    <div  class="filtro">
+        <input formControlName="pesquisar" placeholder="Busque por uma cerveja" class="input-buscar" type="text">
+        <div class="buscar">
+            <button class="btn-buscar">Buscar <mat-icon>search</mat-icon></button>
+
+            <a class="btn-limpar" mat-stroked-button *ngIf="form.dirty" >
+                Limpar<mat-icon>backspace</mat-icon>
+            </a>
+           
+        </div>
+    </div>
+</div>
