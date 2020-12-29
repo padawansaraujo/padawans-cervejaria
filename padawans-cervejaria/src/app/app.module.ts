@@ -9,8 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { HeaderComponent } from './shared/header/header.component';
 import { ListagensComponent } from './listagens/listagens.component';
-
-import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,9 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatCardModule
  
   ],
   providers: [],
