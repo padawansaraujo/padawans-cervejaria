@@ -1,9 +1,19 @@
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Montserrat', sans-serif !important; }
 
+.bg-img
+{
+    background: url('assets/images/background_login.jpg') no-repeat center center fixed;
+    background-position: cover;
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}   
+
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

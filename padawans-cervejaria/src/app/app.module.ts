@@ -11,12 +11,14 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ListagensComponent } from './listagens/listagens.component';
 
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListagensComponent
+    ListagensComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
