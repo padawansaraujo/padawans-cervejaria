@@ -1,2 +1,16 @@
-<app-header></app-header>
-<p>app-works</p>
+
+<div class="row" >
+    <div *ngFor="let beer of beers" class=" col-4">
+
+        <mat-card class="card"> 
+            <img width="60px" height="200px" src="{{beer.image_url}}" alt="{{beer.name}}">
+
+            <mat-card-actions class="actions">
+                <mat-card-subtitle>{{beer.name}}</mat-card-subtitle>
+                <button class="saibaMais" mat-button>
+                    <mat-icon>add_circle_outline</mat-icon>Saiba Mais
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

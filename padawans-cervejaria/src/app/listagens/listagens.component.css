@@ -1,0 +1,39 @@
+
+.card{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 370px;
+    width: 293px !important;
+}
+
+
+
+.actions{
+    display: flex;
+    flex-direction: column;
+     justify-content: space-around;
+     text-align: center;
+    align-items: center;
+    width: 100%;
+    border-top: #CBC1C1 2px solid;
+}
+
+.saibaMais{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 35px;
+    background: #FFB200;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+img{
+    margin: 10px 0 20px 0;
+}

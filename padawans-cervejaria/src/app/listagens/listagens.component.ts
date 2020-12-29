@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { ListagensService } from './../services/listagens.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListagensComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private _listagensServices:ListagensService) { }
+
+  beers = [];
 
   ngOnInit(): void {
+    this.getBeer();
+    
   }
-
+  
+  getBeer(){
+  this._listagensServices.getBeers().subscribe( res =>  {
+    this.beers = res
+    console.log(res)
+  })
+    
+  }
 }
