@@ -6,7 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'listagens', component: ListagensComponent },
-  { path: '', component: LoginComponent }
+  {
+    path: '', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  }
 ];
 
 @NgModule({
