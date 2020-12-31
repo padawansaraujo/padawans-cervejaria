@@ -24,5 +24,9 @@ export class HeaderComponent implements OnInit {
 
  })}
 
-
+limpar(){
+  this.form = this._formBuilder.group({
+    pesquisar:[null]
+  })
+}
 }

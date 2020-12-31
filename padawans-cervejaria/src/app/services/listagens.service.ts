@@ -11,7 +11,7 @@ export class ListagensService {
 
   constructor(private http:HttpClient) { }
 
-  getBeers(): Observable<any>{
-    return this.http.get<any>(`${this.urlApi}/beers`)
+  getBeers(page: number, per_page:number): Observable<any>{
+    return this.http.get<any>(`${this.urlApi}/beers?page=${page}&per_page=${per_page}`)
   }
 }

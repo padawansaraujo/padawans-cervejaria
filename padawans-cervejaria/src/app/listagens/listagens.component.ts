@@ -13,6 +13,8 @@ export class ListagensComponent implements OnInit {
   constructor(private _listagensServices:ListagensService) { }
 
   beers = [];
+  page = 1;
+  per_page = 12;
 
   ngOnInit(): void {
     this.getBeer();
@@ -20,10 +22,21 @@ export class ListagensComponent implements OnInit {
   }
   
   getBeer(){
-  this._listagensServices.getBeers().subscribe( res =>  {
+  this._listagensServices.getBeers(this.page, this.per_page).subscribe( res =>  {
     this.beers = res
     console.log(res)
   })
-    
-  }
+}
+
+
+paginaAnterior() {
+  this.page--;
+  this.getBeer();
+}
+
+proximaPagina() {
+  this.page++;
+  this.getBeer();
+}
+
 }

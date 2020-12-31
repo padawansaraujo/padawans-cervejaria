@@ -9,7 +9,7 @@
         <div class="buscar">
             <button class="btn-buscar">Buscar <mat-icon>search</mat-icon></button>
 
-            <a class="btn-limpar" mat-stroked-button *ngIf="form.dirty" >
+            <a (click)="limpar()" class="btn-limpar" mat-stroked-button *ngIf="form.dirty" >
                 Limpar<mat-icon>backspace</mat-icon>
             </a>
            
