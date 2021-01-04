@@ -13,9 +13,8 @@ export class LoginComponent implements OnInit {
   auth2: any;
   @ViewChild('loginRef', { static: true }) loginElement: ElementRef;
   constructor(
-    private service: LoginService,
-    private router: Router,
-    private ngZone: NgZone,
+    private _service: LoginService,
+    
   ) { }
 
   ngOnInit(): void {
@@ -31,22 +30,13 @@ export class LoginComponent implements OnInit {
           cookiepolicy: 'single_host_origin',
           scope: 'profile email'
         });
-        this.login();
+        this._service.login(this.auth2, this.loginElement);
       });
     }
     this.modalGoogle();
   }
 
-  login() {
-    this.auth2.attachClickHandler(this.loginElement.nativeElement, {},
-      (googleUser) => {
-        let profile = googleUser.getBasicProfile();
-        let id_token = googleUser.getAuthResponse().id_token;
-        this.redirecionar();
-      }, (error) => {
-        console.log(error);
-      });
-  }
+  
 
   modalGoogle() {
     (function (d, s, id) {
@@ -58,9 +48,7 @@ export class LoginComponent implements OnInit {
     }(document, 'script', 'google-jssdk'));
   }
 
-  redirecionar(){
-    this.ngZone.run(() => this.router.navigate(["/listagens"])).then();
-  }
+  
 
   ngOnDestroy() { 
     document.body.classList.remove('bg-img');
