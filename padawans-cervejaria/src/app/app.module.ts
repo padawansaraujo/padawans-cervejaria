@@ -14,12 +14,14 @@ import { ListagensComponent } from './listagens/listagens.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginService } from './services/login.service';
+import { BannerComponent } from './shared/banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListagensComponent
+    ListagensComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

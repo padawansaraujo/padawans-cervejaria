@@ -1,0 +1,18 @@
+#superior{
+    height: 434px;
+    width: 200px;
+    background-color: rgb(255, 178, 0);
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+}
+#superior img{
+    margin-top: 5em;
+    height: 90%;
+}
+#inferior{
+    margin-top: -90px;
+    background-color: rgb(255, 178, 0);
+    height: 180px;
+    width: 200px;
+    border-radius: 50%;
+}
