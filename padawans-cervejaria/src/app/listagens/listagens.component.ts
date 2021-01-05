@@ -1,6 +1,8 @@
+import { HeaderService } from './../services/header.service';
 import { Observable } from 'rxjs';
 import { ListagensService } from './../services/listagens.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-listagens',
@@ -9,24 +11,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListagensComponent implements OnInit {
 
-
-  constructor(private _listagensServices:ListagensService) { }
+ 
+  constructor(private _listagensServices:ListagensService,
+    private activateRoute: ActivatedRoute) { }
 
   beers = [];
   page = 1;
-  per_page = 12;
+  per_page = 12; 
 
+  beer_name;
+
+ 
   ngOnInit(): void {
-    this.getBeer();
+    this.activateRoute.queryParams.subscribe( res =>  {
+      this.beer_name = res.search
+      this.getBeer();
+    })
     
+  
   }
   
   getBeer(){
-  this._listagensServices.getBeers(this.page, this.per_page).subscribe( res =>  {
+  this._listagensServices.getBeers(this.page, this.per_page,this.beer_name).subscribe( res =>  {
     this.beers = res
     console.log(res)
   })
 }
+
+
+
+
 
 
 paginaAnterior() {

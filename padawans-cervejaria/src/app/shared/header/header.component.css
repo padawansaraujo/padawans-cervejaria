@@ -76,3 +76,8 @@ h3{
     align-items: center;
     margin-top: 15px;
 }
+
+a{
+    cursor: pointer;
+
+}
