@@ -37,3 +37,15 @@
 img{
     margin: 10px 0 20px 0;
 }
+
+.paginator{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 60px;
+  }
+  
+  .paginaorIcon{
+    color:rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+  }

@@ -1,4 +1,6 @@
+
 <app-header [titulo]="titulo" [image]="image" [icon]="icon"></app-header>
+
 <div class="row" >
     <div *ngFor="let beer of beers" class=" col-4">
 
@@ -12,5 +14,16 @@
                 </button>
             </mat-card-actions>
         </mat-card>
+       
     </div>
+    <mat-card class="paginator">
+        <a class="paginaorIcon" (click)="paginaAnterior()" *ngIf="page !== 1"
+            matTooltip="Clique para ir para a página anterior">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </a>
+        <a class="paginaorIcon" style="cursor: pointer" (click)="proximaPagina()"
+            matTooltip="Clique para ir para a próxima página">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+        </a>
+    </mat-card>
 </div>
