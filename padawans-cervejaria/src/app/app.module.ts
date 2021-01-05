@@ -1,22 +1,27 @@
+import { DetalhesModule } from './detalhes/detalhes.module';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
 
-import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import { HeaderComponent } from './shared/header/header.component';
 import { ListagensComponent } from './listagens/listagens.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { AuthGuard } from './guards/auth.guard';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListagensComponent
+    ListagensComponent, 
   ],
   imports: [
     BrowserModule,
@@ -24,10 +29,12 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
- 
+    AppRoutingModule,
+    HttpClientModule,
+    MatCardModule 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ AuthGuard ],
+  exports: [ HeaderComponent ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
