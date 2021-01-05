@@ -1,29 +1,25 @@
 <div [formGroup]="form" class="header">
     <div class="titulo">
-<<<<<<< HEAD
-      <a (click)="voltar()"> <img class="beer-icon" src="../../../assets/images/beers (1).svg" alt=""></a> 
-        <h3>Cervejas</h3>
-=======
-        <img *ngIf="image!=' '" class="beer-imagem" src={{image}} alt=""> 
+
+
+        <img  (click)="voltar()" *ngIf="image!=' '" class="beer-imagem" src={{image}} alt="">
         <mat-icon *ngIf="icon!=' '" class="beer-icon" (click)="voltar()">{{icon}}</mat-icon>
         <h3>{{titulo}}</h3>
->>>>>>> e106ce6ae8f942706b63992bb40479c41344f49f
+
     </div>
 
-    <div  class="filtro">
+    <div class="filtro">
         <input formControlName="pesquisar" placeholder="Busque por uma cerveja" class="input-buscar" type="text">
         <div class="buscar">
-            <button class="btn-buscar" (click)="buscarCerveja()" >Buscar <mat-icon>search</mat-icon></button>
+            <button class="btn-buscar" (click)="buscarCerveja()">Buscar <mat-icon>search</mat-icon></button>
 
-<<<<<<< HEAD
-            <a (click)="limpar()" class="btn-limpar" mat-stroked-button *ngIf="form.dirty" >
-=======
-            <button class="btn-limpar" mat-stroked-button *ngIf="form.dirty" >
->>>>>>> e106ce6ae8f942706b63992bb40479c41344f49f
+
+            <button (click)="limpar()" class="btn-limpar" mat-stroked-button *ngIf="form.dirty">
+
                 Limpar<mat-icon>backspace</mat-icon>
             </button>
-           
+
         </div>
     </div>
-    
+
 </div>

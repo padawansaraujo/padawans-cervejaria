@@ -29,7 +29,6 @@ export class DetalhesComponent implements OnInit {
   getCerveja(id){
     this._service.get(id).subscribe(resultado => {
       this.result = resultado[0];
-      console.log(this.result);
     })
     
   }
