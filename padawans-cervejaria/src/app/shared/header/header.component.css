@@ -18,7 +18,6 @@
 .filtro{
     display: flex;
     align-items: center;
-    justify-content: space-around;
     width: 80%;
     height: 100%;
 }
@@ -26,53 +25,55 @@
 .buscar{
     display: flex;
     justify-content: center;
+    margin-left: 3em;
 }
 
 .btn-buscar{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 3em;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px; 
     width: 90px;
     background:  #FFB200;
     color: white;
 }
 
-.btn-limpar{
+.btn-limpar{ 
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: black 1px solid;
+    border:#290900 1px solid;
     border-radius: 8px;
     width: 90px;
     background:  #ffffff;
-    color: rgb(0, 0, 0);
+    color: #290900;
 }
 
 .input-buscar{
     color: #ffffff;
-    margin-left: 80px;
-    width: 60%;
+    width: 30%;
     background: #290900;
-    border: white 1px solid;
+    border: white 1.5px solid;
     border-radius: 5px;
     height: 30px;
 }
 
 
 
+.beer-imagem{
+    margin:0 30px 0 30px;
+    height: 40%;
+}
 .beer-icon{
-    margin:0 50px 0 30px;
-    height: 100%;
-    width: 40px;
+    color: white;
+    margin: 0 30px 0 20px;
+    cursor: pointer;
 }
 
 h3{
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 15px;
+    width: 150px;
 }

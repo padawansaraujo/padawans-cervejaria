@@ -1,4 +1,4 @@
-
+<app-header [titulo]="titulo" [image]="image" [icon]="icon"></app-header>
 <div class="row" >
     <div *ngFor="let beer of beers" class=" col-4">
 
@@ -7,7 +7,7 @@
 
             <mat-card-actions class="actions">
                 <mat-card-subtitle>{{beer.name}}</mat-card-subtitle>
-                <button class="saibaMais" mat-button>
+                <button class="saibaMais" mat-button (click)="saibaMais(beer.id)">
                     <mat-icon>add_circle_outline</mat-icon>Saiba Mais
                 </button>
             </mat-card-actions>

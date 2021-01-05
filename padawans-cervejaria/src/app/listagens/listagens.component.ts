@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ListagensService } from './../services/listagens.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-listagens',
@@ -9,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListagensComponent implements OnInit {
 
-
-  constructor(private _listagensServices:ListagensService) { }
+  titulo = "Cervejas";
+  image = "../../assets/images/beers (1).svg";
+  icon = " ";
+  constructor(
+    private _listagensServices:ListagensService,
+    private _ngZone : NgZone,
+    private _router : Router
+    ) { }
 
   beers = [];
 
@@ -23,7 +30,11 @@ export class ListagensComponent implements OnInit {
   this._listagensServices.getBeers().subscribe( res =>  {
     this.beers = res
     console.log(res)
-  })
-    
+  }) 
   }
+
+  saibaMais(id){
+    this._ngZone.run(() => this._router.navigate(["/detalhe",`${id}`])).then();
+  }
+  
 }

@@ -1,5 +1,5 @@
 #superior{
-    height: 434px;
+    height: 500px;
     width: 200px;
     background-color: rgb(255, 178, 0);
     text-align: center;
@@ -7,7 +7,7 @@
 }
 #superior img{
     margin-top: 5em;
-    height: 90%;
+    height: 80%;
 }
 #inferior{
     margin-top: -90px;
@@ -15,4 +15,8 @@
     height: 180px;
     width: 200px;
     border-radius: 50%;
+}
+#banner{
+    margin-left: 65em;
+    position: absolute;
 }
