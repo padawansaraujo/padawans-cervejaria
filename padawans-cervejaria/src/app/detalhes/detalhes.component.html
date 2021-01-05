@@ -1,0 +1,35 @@
+<app-banner [src]="result.image_url"></app-banner>
+<app-header [titulo]="titulo" [icon]="icon" [image]="image"></app-header>
+<mat-card class="detalhes">
+    <div class="informacao">
+        <h1 class="titulo">{{result.name}}</h1>
+        <p class="descricao">{{result.description}}</p>
+        <p class="ingredientes">Ingredientes:</p>
+        <p class="ingredientes">Malte:
+            <small *ngFor="let malt of result.ingredients.malt">
+                {{malt.name}}
+            </small>
+        </p>
+        <p class="ingredientes">Rops: 
+            <small *ngFor="let hops of result.ingredients.hops">
+                {{hops.name}}
+            </small>
+        </p>
+
+        <p class="ingredientes">{{result.ingredients.yeast}}</p>
+    </div>
+    <div class="icons">
+        <div class="icon">
+            <div><img src="../../assets/images/cerveja.svg" alt=""></div>
+            <p>{{result.volume.value}} {{result.volume.unit}}</p>
+        </div>
+        <div class="icon">
+            <div><img src="../../assets/images/ph.svg" alt=""></div>
+            <p>{{result.ph}}</p>
+        </div>
+        <div class="icon">
+            <div><img id="porcentagem" src="../../assets/images/porcentagem.svg" alt=""></div>
+            <p>{{result.abv}}%</p>
+        </div>
+    </div>
+</mat-card>
