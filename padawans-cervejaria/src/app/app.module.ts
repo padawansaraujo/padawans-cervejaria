@@ -5,19 +5,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ListagensComponent } from './listagens/listagens.component';
-
-import { HeaderComponent } from './shared/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
+
+import { AppComponent } from './app.component';
+import { ListagensComponent } from './listagens/listagens.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginService } from './services/login.service';
+import { BannerComponent } from './shared/banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListagensComponent
+    ListagensComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     MatCardModule
  
   ],
-  providers: [],
+  providers: [
+    AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
