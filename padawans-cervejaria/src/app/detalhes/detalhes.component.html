@@ -1,35 +1,35 @@
-<app-banner [src]="result.image_url"></app-banner>
+<app-banner [src]="imagem"></app-banner>
 <app-header [titulo]="titulo" [icon]="icon" [image]="image"></app-header>
 <mat-card class="detalhes">
     <div class="informacao">
-        <h1 class="titulo">{{result.name}}</h1>
-        <p class="descricao">{{result.description}}</p>
+        <h1 class="titulo">{{name}}</h1>
+        <p class="descricao">{{description}}</p>
         <p class="ingredientes">Ingredientes:</p>
         <p class="ingredientes">Malte:
-            <small *ngFor="let malt of result.ingredients.malt">
+            <small *ngFor="let malt of malt ">
                 {{malt.name}}
             </small>
         </p>
-        <p class="ingredientes">Rops: 
-            <small *ngFor="let hops of result.ingredients.hops">
+        <p class="ingredientes">Hops: 
+            <small *ngFor="let hops of hops">
                 {{hops.name}}
             </small>
         </p>
 
-        <p class="ingredientes">{{result.ingredients.yeast}}</p>
+        <p class="ingredientes">{{yeast}}</p>
     </div>
     <div class="icons">
         <div class="icon">
             <div><img src="../../assets/images/cerveja.svg" alt=""></div>
-            <p>{{result.volume.value}} {{result.volume.unit}}</p>
+            <p>{{volumeValue}} {{volumeUnite}}</p>
         </div>
         <div class="icon">
             <div><img src="../../assets/images/ph.svg" alt=""></div>
-            <p>{{result.ph}}</p>
+            <p>{{ph}}</p>
         </div>
         <div class="icon">
             <div><img id="porcentagem" src="../../assets/images/porcentagem.svg" alt=""></div>
-            <p>{{result.abv}}%</p>
+            <p>{{abv}}%</p>
         </div>
     </div>
 </mat-card>
