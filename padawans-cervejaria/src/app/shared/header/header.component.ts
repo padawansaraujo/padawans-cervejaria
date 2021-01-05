@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, Input, OnInit, NgZone } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -8,21 +9,28 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class HeaderComponent implements OnInit {
   form: FormGroup;
-
-  constructor(  private _formBuilder: FormBuilder,) { }
+  @Input() titulo = '';
+  @Input() icon = '';
+  @Input() image = '';
+  
+  constructor(  
+    private _formBuilder: FormBuilder,
+    private _ngZone: NgZone,
+    private _router: Router
+    ) { }
 
   ngOnInit(): void {
-    this.initForm()
-    
-    
+    this.initForm()    
   }
 
  initForm(){
   this.form = this._formBuilder.group({
-  
    pesquisar:[null],
 
  })}
+ voltar(){
+  this._ngZone.run(() => this._router.navigate(["/listagens"])).then();
+ }
 
 
 }

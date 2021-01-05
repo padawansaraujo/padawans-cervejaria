@@ -1,0 +1,51 @@
+@import '../../styles.css';
+
+.detalhes{
+    width: 780px;
+    height: 460px;
+    margin: 3em 0 0 4.5em;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em;
+    font-family: Montserrat;
+}
+.informacao{
+    margin-right: 3em;
+}
+.titulo{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 3rem;
+}
+.descricao{
+    font-size: 1rem;
+}
+small{
+    font-size: 0.9rem;
+}
+.ingredientes{
+    font-size: 1rem;
+}
+.icons{
+    align-items: center;
+    text-align: center;
+    margin: auto !important; 
+}
+
+.icon{
+    margin: 1em;
+}
+.icon div{
+    width: 71px;
+    height: 69px;
+    border-radius: 50px;
+    border: solid 1.3px;   
+}
+img{
+    margin: 8px auto 8px auto !important;
+    width: 70%;
+}
+#porcentagem{
+    margin: 15px auto 15px auto !important;
+    width: 50% !important; 
+}

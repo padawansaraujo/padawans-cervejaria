@@ -1,3 +1,4 @@
+import { DetalhesModule } from './detalhes/detalhes.module';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,15 +14,14 @@ import { AppComponent } from './app.component';
 import { ListagensComponent } from './listagens/listagens.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { AuthGuard } from './guards/auth.guard';
-import { LoginService } from './services/login.service';
-import { BannerComponent } from './shared/banner/banner.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListagensComponent,
-    BannerComponent
+    ListagensComponent, 
   ],
   imports: [
     BrowserModule,
@@ -31,11 +31,10 @@ import { BannerComponent } from './shared/banner/banner.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatCardModule
- 
+    MatCardModule 
   ],
-  providers: [
-    AuthGuard],
-  bootstrap: [AppComponent]
+  providers: [ AuthGuard ],
+  exports: [ HeaderComponent ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
