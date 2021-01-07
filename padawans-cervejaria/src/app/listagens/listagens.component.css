@@ -49,3 +49,10 @@ img{
     color:rgba(0, 0, 0, 0.54);
     cursor: pointer;
   }
+  
+  @media screen and (max-width:1057px){
+    .card{
+        margin: 10px auto;
+      
+    }
+  }
