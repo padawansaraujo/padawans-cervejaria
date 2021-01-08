@@ -10,10 +10,10 @@ const routes: Routes = [
     path: '', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   { path: 'listagens', component: ListagensComponent,
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
   },
   { path: 'detalhe/:id', component: DetalhesComponent,
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
   declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
-})
+}) 
 export class AppRoutingModule { }
 
