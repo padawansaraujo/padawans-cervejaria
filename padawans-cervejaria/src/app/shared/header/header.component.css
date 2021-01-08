@@ -90,18 +90,24 @@ a{
     align-items: center;
     margin-right:1vw ;
 }
-#perfil div{
+#perfil .foto{
     width: 50px !important;
     height: 50px !important;
     margin-right:1vw ;
     border-radius: 50%;
 }
-#perfil div img{
+#perfil .foto img{
     width: 100%;
     border-radius: 50%;
 }
-#perfil small{
+.info small{
+    display: block;
+    padding-bottom: 0.25em;
     color: #ffffff;
     font-size: 100%;
+}
+
+.info :nth-child(2){
+    cursor: pointer;
 }
     
