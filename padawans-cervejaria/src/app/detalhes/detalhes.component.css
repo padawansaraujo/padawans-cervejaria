@@ -1,16 +1,19 @@
 @import '../../styles.css';
-
+@import './banner/banner.component.css';
 .detalhes{
-    width: 780px;
-    height: 460px;
-    margin: 3em 0 0 4.5em;
+    width: 65vw;
+    height: 80vh;
+    margin: 4vh 0 0 5vw;
     display: flex;
     justify-content: space-between;
-    padding: 3em;
+    padding: 1%;
     font-family: Montserrat;
 }
 .informacao{
-    margin-right: 3em;
+    margin: 3%;
+}
+#cerveja-img img{
+    display: none;
 }
 .titulo{
     font-family: Montserrat;
@@ -29,23 +32,109 @@ small{
 .icons{
     align-items: center;
     text-align: center;
-    margin: auto !important; 
+    margin: 3% !important; 
 }
 
 .icon{
     margin: 1em;
 }
 .icon div{
-    width: 71px;
-    height: 69px;
-    border-radius: 50px;
+    width: 5vw;
+    height: 5vw;    
+    border-radius: 50%;
     border: solid 1.3px;   
 }
-img{
-    margin: 8px auto 8px auto !important;
+.icon div img{
+    margin: 10% auto 10% auto !important;
     width: 70%;
 }
 #porcentagem{
-    margin: 15px auto 15px auto !important;
+    margin: 20% auto 20% auto !important;
     width: 50% !important; 
 }
+@media screen and (max-width: 750px){
+    .detalhes{
+        display: block;
+        width: 95vw;
+        height: 80vh;
+        margin: 5vh 0 0 2.5vw;
+    }
+    .icons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 0 5vw !important;
+    }
+    .icon div{
+        width: 9vw;
+        height: 9vw;   
+    }
+    .icon{
+        margin-right: 15vw;
+    }
+    .informacao{
+        display: flex;
+    }
+    #cerveja-img img{
+        /*top rigth buttom left*/
+        margin: 5vh 2vw 0 1vw;
+        display: block;
+        width: 12vw;
+    }
+    .titulo{
+        font-size: 2.5rem;
+        margin: 10px;
+    }
+    .descricao{
+        font-size: 0.9rem;
+    }
+    small{
+        font-size: 0.8rem;
+    }
+    .ingredientes{
+        font-size: 0.9rem;
+    }
+
+}
+
+@media screen and (max-width: 426px){
+    
+    .detalhes{
+        height: 140vh;
+        margin: 3vh 0 0 2.5vw;
+    }
+    .titulo{ 
+        margin: 0 0 10px 0;
+    }
+    .informacao{
+        display: block;
+    }
+    #cerveja-img{
+        height: 40vh;
+        width: 40vh;
+        border-radius: 50%;
+        margin: auto;
+        padding-top: 10%;
+        background-color: rgb(255, 178, 0);
+    }
+    #cerveja-img img{
+        /*top rigth buttom left*/
+        margin:  auto;
+        width: 50px;
+    }
+    .icons{
+        justify-content: center;
+        margin: 0 !important;
+    }
+    .icon{
+        margin: 5vh;
+    }
+    .icon div{
+        width: 50px;
+        height: 50px;   
+    }
+
+    
+}
+
+

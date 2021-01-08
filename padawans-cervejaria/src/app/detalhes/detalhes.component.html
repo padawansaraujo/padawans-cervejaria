@@ -2,6 +2,7 @@
 <app-header [titulo]="titulo" [icon]="icon" [image]="image"></app-header>
 <mat-card class="detalhes">
     <div class="informacao">
+        <div>
         <h1 class="titulo">{{name}}</h1>
         <p class="descricao">{{description}}</p>
         <p class="ingredientes">Ingredientes:</p>
@@ -17,7 +18,12 @@
         </p>
 
         <p class="ingredientes">{{yeast}}</p>
+        </div>
+        <div id="cerveja-img">
+            <img src={{imagem}} alt="">
+        </div>
     </div>
+
     <div class="icons">
         <div class="icon">
             <div><img src="../../assets/images/cerveja.svg" alt=""></div>

@@ -6,8 +6,8 @@
     border-radius: 0px 0px 10px 10px;
 }
 #superior img{
-    margin-top: 5em;
-    height: 80%;
+    margin-top: 70%;
+    width: 50%;
 }
 #inferior{
     margin-top: -90px;
@@ -17,6 +17,21 @@
     border-radius: 50%;
 }
 #banner{
-    margin-left: 65em;
+    margin-left: 75%; 
     position: absolute;
+}
+
+@media screen and (max-width: 750px){
+
+    #banner{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    #superior{
+        height: 600px;        
+    }
+    
 }
