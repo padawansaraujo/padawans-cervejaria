@@ -17,7 +17,10 @@ export class HeaderComponent implements OnInit {
   beer_name = "macaco de asas";
   form: FormGroup;
   
-
+  usuario = {
+    nome: '0',
+    fotoUrl: '0'
+  };
 
 
  
@@ -25,6 +28,7 @@ export class HeaderComponent implements OnInit {
   @Input() titulo = '';
   @Input() icon = '';
   @Input() image = '';
+
   
   constructor(  
     private _formBuilder: FormBuilder,
@@ -33,18 +37,25 @@ export class HeaderComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.initForm()    
+    this.initForm();   
+    this.getUser();
   }
 
  initForm(){
   this.form = this._formBuilder.group({
    pesquisar:[null],
 
- })}
+ })} 
+
+ getUser(){
+  this.usuario.nome = window.sessionStorage.getItem('nome');
+  this.usuario.fotoUrl = window.sessionStorage.getItem('foto');
+ }
+
  voltar(){
   this._ngZone.run(() => this._router.navigate(["/listagens"])).then();
  }
-
+ 
 
   ngAfterViewInit() { }
 

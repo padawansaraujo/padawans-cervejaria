@@ -84,6 +84,7 @@ a{
 
 }
 
+
 @media screen and (max-width:850px){
     .input-buscar{
         margin-left: 30px;
@@ -127,5 +128,27 @@ a{
     }
 }
 
+
+#perfil{
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    align-items: center;
+    margin-right:1vw ;
+}
+#perfil div{
+    width: 50px !important;
+    height: 50px !important;
+    margin-right:1vw ;
+    border-radius: 50%;
+}
+#perfil div img{
+    width: 100%;
+    border-radius: 50%;
+}
+#perfil small{
+    color: #ffffff;
+    font-size: 100%;
+}
 
     
