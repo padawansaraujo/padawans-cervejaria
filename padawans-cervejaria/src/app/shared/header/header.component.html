@@ -23,9 +23,11 @@
     </div>
     <div id="perfil">
 
-        <div><img src={{usuario.fotoUrl}} alt=""></div>
-        <small>{{usuario.nome}}</small>
-        
+        <div class="foto"><img src={{usuario.fotoUrl}} alt=""></div>
+        <div class="info">
+            <small>{{usuario.nome}}</small>
+            <small (click)="sair()">Sair</small>
+        </div>
         
     </div>
 

@@ -80,6 +80,11 @@ limpar() {
   })
 }
 
+sair(){
+  window.sessionStorage.clear();
+  location.reload();
+}
+
 }
 
 
