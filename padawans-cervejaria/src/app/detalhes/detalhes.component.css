@@ -2,7 +2,7 @@
 @import './banner/banner.component.css';
 .detalhes{
     width: 65vw;
-    height: 80vh;
+    height: 100%;
     margin: 4vh 0 0 5vw;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,6 @@ small{
     .detalhes{
         display: block;
         width: 95vw;
-        height: 80vh;
         margin: 5vh 0 0 2.5vw;
     }
     .icons{
@@ -76,7 +75,7 @@ small{
         display: flex;
     }
     #cerveja-img img{
-        /*top rigth buttom left*/
+        
         margin: 5vh 2vw 0 1vw;
         display: block;
         width: 12vw;
@@ -100,7 +99,6 @@ small{
 @media screen and (max-width: 426px){
     
     .detalhes{
-        height: 140vh;
         margin: 3vh 0 0 2.5vw;
     }
     .titulo{ 
@@ -120,7 +118,7 @@ small{
     #cerveja-img img{
         /*top rigth buttom left*/
         margin:  auto;
-        width: 50px;
+        width: 20%;
     }
     .icons{
         justify-content: center;
