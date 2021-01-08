@@ -7,7 +7,7 @@
 }
 #superior img{
     margin-top: 70%;
-    width: 50%;
+    height: 60%;
 }
 #inferior{
     margin-top: -90px;
@@ -17,8 +17,13 @@
     border-radius: 50%;
 }
 #banner{
-    margin-left: 75%; 
+    margin-left: 72%; 
     position: absolute;
+}
+p{
+    /*top rigth buttom left*/
+    margin: 5vh 2vw 0 2vw;
+    font-size: 0.7rem;
 }
 
 @media screen and (max-width: 750px){
