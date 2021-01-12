@@ -9,9 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetalhesComponent implements OnInit {
 
-  titulo = "voltar a lista de cervejas";
+  titulo = "voltar";
   icon = "keyboard_backspace";
   image = " ";
+  toolTip = "voltar para lista de cervejas";
   id: string;
   result;
   imagem = " ";

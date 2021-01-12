@@ -17,7 +17,7 @@
     border-radius: 50%;
 }
 #banner{
-    margin-left: 72%; 
+    margin-left: 63%; 
     position: absolute;
 }
 #superior p{
@@ -26,7 +26,7 @@
     font-size: 0.7rem;
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 768px){
 
     #banner{
         display: none;

@@ -1,9 +1,9 @@
 @import '../../styles.css';
 @import './banner/banner.component.css';
 .detalhes{
-    width: 65vw;
+    width: 60vw;
     height: 80vh;
-    margin: 4vh 0 0 5vw;
+    margin: 3vh 0 0 2vw;
     display: flex;
     justify-content: space-between;
     padding: 1%;
@@ -52,12 +52,11 @@ small{
     margin: 20% auto 20% auto !important;
     width: 50% !important; 
 }
-@media screen and (max-width: 750px){
+@media screen and (max-width: 768px){
     .detalhes{
         display: block;
         width: 95vw;
-        height: 80vh;
-        margin: 5vh 0 0 2.5vw;
+        
     }
     .icons{
         display: flex;
@@ -75,11 +74,13 @@ small{
     .informacao{
         display: flex;
     }
-    #cerveja-img img{
-        /*top rigth buttom left*/
+    #cerveja-img{
         margin: 5vh 2vw 0 1vw;
+    }
+    #cerveja-img img{
+        margin:0;
         display: block;
-        width: 12vw;
+        height: 50vh;
     }
     .titulo{
         font-size: 2.5rem;
@@ -114,13 +115,13 @@ small{
         width: 40vh;
         border-radius: 50%;
         margin: auto;
-        padding-top: 10%;
+        padding-top: 5%;
         background-color: rgb(255, 178, 0);
     }
     #cerveja-img img{
         /*top rigth buttom left*/
         margin:  auto;
-        width: 50px;
+        height: 35vh;
     }
     .icons{
         justify-content: center;

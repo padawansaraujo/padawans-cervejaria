@@ -20,6 +20,7 @@ export class ListagensComponent implements OnInit {
   titulo = "Cervejas";
   image = "../../assets/images/beers (1).svg";
   icon = " ";
+  toolTip = "Mostrar todas as cervejas";
   constructor(
     private _listagensServices: ListagensService,
     private _ngZone: NgZone,

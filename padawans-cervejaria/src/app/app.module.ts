@@ -17,6 +17,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,8 @@ import {MatInputModule} from '@angular/material/input';
     HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
-    
+    MatInputModule,
+    MatTooltipModule    
   ],
   providers: [ AuthGuard ],
   exports: [ HeaderComponent ],
