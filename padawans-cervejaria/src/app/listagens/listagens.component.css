@@ -25,6 +25,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 50%;
     height: 35px;
     background: #FFB200;
     color: #ffffff;

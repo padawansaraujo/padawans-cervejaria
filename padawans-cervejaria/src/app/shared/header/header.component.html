@@ -10,7 +10,10 @@
     </div>
 
     <div class="filtro">
-        <input formControlName="pesquisar" placeholder="Busque por uma cerveja" class="input-buscar" type="text">
+        <mat-form-field  appearance="outline" >
+            <mat-label >Search</mat-label>
+            <input matInput class="input-buscar" formControlName="pesquisar"  type="text"/>
+        </mat-form-field> 
         <div class="buscar">
             <button class="btn-buscar" (click)="buscarCerveja()">Buscar <mat-icon>search</mat-icon></button>
 
