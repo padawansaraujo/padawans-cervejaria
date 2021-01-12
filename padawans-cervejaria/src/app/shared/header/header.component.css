@@ -11,7 +11,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 20%;
+    width: 18%;
     height: 100%;
 }
 
@@ -25,14 +25,14 @@
 .buscar{
     display: flex;
     justify-content: center;
-    margin-left: 3em;
+    margin-left: 3vw;
 }
 
 .btn-buscar{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 3em;
+    margin-right: 2vw;
     border: none;
     border-radius: 5px; 
     height: 30px;
@@ -46,7 +46,7 @@
     justify-content: space-around;
     align-items: center;
     border:#290900 1px solid;
-    border-radius: 8px;
+    border-radius: 5px;
     height: 30px;
     width: 90px;
     background:  #ffffff;
@@ -186,4 +186,10 @@ a{
     cursor: pointer;
 }
 
+@media screen and (max-width:768px){
     
+    h3{
+        display: none;
+    }
+
+}

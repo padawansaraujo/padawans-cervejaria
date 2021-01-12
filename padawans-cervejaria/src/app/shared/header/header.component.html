@@ -1,39 +1,39 @@
 <div class="main">
-<div [formGroup]="form" class="header">
-    <div class="titulo">
+    <div [formGroup]="form" class="header">
+        <div class="titulo">
 
 
-        <img  (click)="voltar()" *ngIf="image!=' '" class="beer-imagem" src={{image}} alt="">
-        <mat-icon *ngIf="icon!=' '" class="beer-icon" (click)="voltar()">{{icon}}</mat-icon>
-        <h3>{{titulo}}</h3>
-
-    </div>
-
-    <div class="filtro">
-        <mat-form-field  appearance="outline" >
-            <mat-label >Search</mat-label>
-            <input matInput class="input-buscar" formControlName="pesquisar"  type="text"/>
-        </mat-form-field> 
-        <div class="buscar">
-            <button class="btn-buscar" (click)="buscarCerveja()">Buscar <mat-icon>search</mat-icon></button>
-
-
-            <button (click)="limpar()" class="btn-limpar" mat-stroked-button *ngIf="form.dirty">
-
-                Limpar<mat-icon>backspace</mat-icon>
-            </button>
+            <img (click)="voltar()" *ngIf="image!=' '" class="beer-imagem" src={{image}} alt="" matTooltip={{toolTip}}>
+            <mat-icon *ngIf="icon!=' '" class="beer-icon" (click)="voltar()" matTooltip={{toolTip}}>{{icon}}</mat-icon>
+            <h3>{{titulo}}</h3>
 
         </div>
-    </div>
-    <div id="perfil">
 
-        <div class="foto"><img src={{usuario.fotoUrl}} alt=""></div>
-        <div class="info">
-            <small>{{usuario.nome}}</small>
-            <small (click)="sair()">Sair</small>
+        <div class="filtro">
+            <mat-form-field appearance="outline">
+                <mat-label>Search</mat-label>
+                <input matInput class="input-buscar" formControlName="pesquisar" type="text" />
+            </mat-form-field>
+            <div class="buscar">
+                <button class="btn-buscar" (click)="buscarCerveja()">Buscar <mat-icon>search</mat-icon></button>
+
+
+                <button (click)="limpar()" class="btn-limpar" mat-stroked-button *ngIf="form.dirty">
+
+                    Limpar<mat-icon>backspace</mat-icon>
+                </button>
+
+            </div>
         </div>
-        
-    </div>
+        <div id="perfil">
 
+            <div class="foto"><img src={{usuario.fotoUrl}} alt=""></div>
+            <div class="info">
+                <small>{{usuario.nome}}</small>
+                <small (click)="sair()">Sair</small>
+            </div>
+
+        </div>
+
+    </div>
 </div>
-

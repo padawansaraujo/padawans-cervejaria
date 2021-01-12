@@ -28,6 +28,8 @@ export class HeaderComponent implements OnInit {
   @Input() titulo = '';
   @Input() icon = '';
   @Input() image = '';
+  @Input() toolTip = '';
+  
 
   
   constructor(  
