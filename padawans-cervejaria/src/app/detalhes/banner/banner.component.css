@@ -20,7 +20,7 @@
     margin-left: 72%; 
     position: absolute;
 }
-p{
+#superior p{
     /*top rigth buttom left*/
     margin: 5vh 2vw 0 2vw;
     font-size: 0.7rem;
