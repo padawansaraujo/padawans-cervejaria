@@ -35,6 +35,7 @@
     margin-right: 3em;
     border: none;
     border-radius: 5px; 
+    height: 30px;
     width: 90px;
     background:  #FFB200;
     color: white;
@@ -46,18 +47,44 @@
     align-items: center;
     border:#290900 1px solid;
     border-radius: 8px;
+    height: 30px;
     width: 90px;
     background:  #ffffff;
     color: #290900;
 }
 
 .input-buscar{
-    color: #ffffff;
-    width: 30%;
-    background: #290900;
-    border: white 1.5px solid;
-    border-radius: 5px;
-    height: 30px;
+    color: #ffffff !important;
+    
+}
+
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white !important;
+  }
+
+  input.mat-input-element {
+      
+      color: white !important;
+    }
+    
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+        margin-top: 20px;
+      height: 30px!important;
+    color: white!important;
+   
+}
+
+::ng-deep .mat-form-field-label {
+    margin-top: 5px !important;
+    color: rgb(255, 255, 255)!important;
+}
+
+
+mat-form-field {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 
@@ -83,6 +110,52 @@ a{
     cursor: pointer;
 
 }
+
+
+@media screen and (max-width:850px){
+    .input-buscar{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width:744px){
+    .input-buscar{
+        width: 40%;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width:636px){
+    .input-buscar{
+        width: 40%;
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width:554px){
+    .input-buscar{
+        width: 45%;
+        margin-left: 70px;
+        
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .input-buscar{
+        width: 100px;
+        margin-left: 80px;
+        
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 7px;
+    }
+}
+
+
 #perfil{
     display: flex;
     justify-content: center;
@@ -107,7 +180,10 @@ a{
     font-size: 100%;
 }
 
+
+
 .info :nth-child(2){
     cursor: pointer;
 }
+
     

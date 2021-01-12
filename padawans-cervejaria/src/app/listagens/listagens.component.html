@@ -2,8 +2,7 @@
 <app-header [titulo]="titulo" [image]="image" [icon]="icon"></app-header>
 
 <div class="row" >
-    <div *ngFor="let beer of beers" class=" col-4">
-
+    <div *ngFor="let beer of beers" class=" 1 col-md-4 e 1 col-sm-6 e col-12">
         <mat-card class="card"> 
             <img width="60px" height="200px" src="{{beer.image_url}}" alt="{{beer.name}}">
 
