@@ -15,7 +15,8 @@ import { ListagensComponent } from './listagens/listagens.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DetalhesComponent } from './detalhes/detalhes.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,10 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatCardModule 
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
+    
   ],
   providers: [ AuthGuard ],
   exports: [ HeaderComponent ],
