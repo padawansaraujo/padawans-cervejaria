@@ -1,9 +1,10 @@
-import { MatCardModule } from '@angular/material/card';
-import { AppModule } from './../app.module';
-import { DetalhesComponent } from './detalhes.component';
 import { NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
+
+import { DetalhesComponent } from './detalhes.component';
 import { BannerComponent } from './banner/banner.component';
+import { SharedModule } from './../shared/shared.module';
 
 
 
@@ -14,7 +15,7 @@ import { BannerComponent } from './banner/banner.component';
   imports: [
     CommonModule,
     MatCardModule,
-    AppModule
+    SharedModule
   ]
 })
 export class DetalhesModule { }
