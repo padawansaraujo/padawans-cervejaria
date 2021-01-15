@@ -1,6 +1,5 @@
-import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -12,9 +11,11 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   auth2: any;
   @ViewChild('loginRef', { static: true }) loginElement: ElementRef;
+
+  sdk = 'googleSDKLoaded';
+  gapi = 'gapi';
   constructor(
-    private _service: LoginService,
-    
+    private _SERVICE: LoginService
   ) { }
 
   ngOnInit(): void {
@@ -23,20 +24,19 @@ export class LoginComponent implements OnInit {
   }
 
   googleSDK() {
-    window['googleSDKLoaded'] = () => {
-      window['gapi'].load('auth2', () => {
-        this.auth2 = window['gapi'].auth2.init({
+    window[this.sdk] = () => {
+      window[this.gapi].load('auth2', () => {
+        this.auth2 = window[this.gapi].auth2.init({
           client_id: '121572073016-ndr1p3qdkbhdlm0l98imnig0kat3fdj0.apps.googleusercontent.com',
           cookiepolicy: 'single_host_origin',
           scope: 'profile email'
         });
-        this._service.login(this.auth2, this.loginElement);
+        this._SERVICE.login(this.auth2, this.loginElement);
       });
-    }
+    };
     this.modalGoogle();
   }
 
-  
 
   modalGoogle() {
     (function (d, s, id) {
@@ -48,10 +48,8 @@ export class LoginComponent implements OnInit {
     }(document, 'script', 'google-jssdk'));
   }
 
-  
-
-  ngOnDestroy() { 
+  ngOnDestroy(): void{
     document.body.classList.remove('bg-img');
   }
-
 }
+

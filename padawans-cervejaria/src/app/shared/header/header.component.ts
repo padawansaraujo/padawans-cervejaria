@@ -14,7 +14,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 export class HeaderComponent implements OnInit {
 
-  beer_name = "macaco de asas";
+  beer_name = ' ';
   form: FormGroup;
   
   usuario = {
@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.initForm();   
+    this.initForm();
     this.getUser();
   }
 
@@ -74,7 +74,6 @@ buscarCerveja(){
   this._router.navigate(['/listagens'],{queryParams:{search:query}})
   this.limpar()
 }
-
 
 limpar() {
   this.form = this._formBuilder.group({

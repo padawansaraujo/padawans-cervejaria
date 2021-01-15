@@ -14,7 +14,6 @@ export class ListagensService {
   ) { }
 
   getBeers(page: number, per_page:number, beer_name:string): Observable<any>{
-    console.log(beer_name)
     return this.http.get<any>(`${this.urlApi}/beers?page=${page}&per_page=${per_page}${!beer_name  ? "" : `&beer_name=${beer_name}`}`)
   }
 }
