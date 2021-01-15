@@ -8,12 +8,12 @@ import { Injectable } from '@angular/core';
 export class DetalheService {
   API = 'https://api.punkapi.com/v2/beers';
   constructor(
-    private httpClient : HttpClient
+    private httpClient: HttpClient
   ) { }
 
   get(id): Observable<any>{
+
     return this.httpClient.get<any>(`${this.API}/${id}`);
-    
   }
 }
 

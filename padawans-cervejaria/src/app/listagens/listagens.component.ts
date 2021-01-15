@@ -1,5 +1,6 @@
 
 import { Component, NgZone, OnInit } from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
@@ -25,7 +26,8 @@ export class ListagensComponent implements OnInit {
     private _listagensServices: ListagensService,
     private _ngZone: NgZone,
     private _router: Router,
-    private activateRoute: ActivatedRoute
+    private activateRoute: ActivatedRoute,
+    private _snackBar: MatSnackBar,
   ) { }
 
 
@@ -38,29 +40,35 @@ export class ListagensComponent implements OnInit {
 
   ngOnInit(): void {
     this.activateRoute.queryParams.subscribe(res => {
-      this.beer_name = res.search
+      this.beer_name = res.search;
       this.getBeer();
-    })
+    });
 
 
   }
 
   getBeer() {
     this._listagensServices.getBeers(this.page, this.per_page, this.beer_name).subscribe(res => {
-      this.beers = res
-    })
+      this.beers = res;
+      if (this.page !== 0 && this.beers.length === 0) {
+        this._snackBar.open(`Não foram encontrados  resultados para ${this.beer_name}`, '', { duration: 3000 });
+        this.beer_name = '';
+        this.getBeer();
+        return;
+      }
+    });
 
 
   }
 
 
   paginaAnterior() {
-    this.page--;
+    --this.page;
     this.getBeer();
   }
 
   proximaPagina() {
-    this.page++;
+    ++this.page;
     this.getBeer();
   }
 

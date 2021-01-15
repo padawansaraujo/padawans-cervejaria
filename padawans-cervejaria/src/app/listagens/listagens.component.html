@@ -20,7 +20,7 @@
             matTooltip="Clique para ir para a página anterior">
             <mat-icon>keyboard_arrow_left</mat-icon>
         </a>
-        <a class="paginaorIcon" style="cursor: pointer" (click)="proximaPagina()"
+        <a class="paginaorIcon" style="cursor: pointer" (click)="proximaPagina()" *ngIf="beers.length === 12"
             matTooltip="Clique para ir para a próxima página">
             <mat-icon>keyboard_arrow_right</mat-icon>
         </a>
